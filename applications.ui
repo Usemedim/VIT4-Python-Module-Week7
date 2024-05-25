@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>910</width>
+    <height>541</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#MyLoginForm {
+background: white;
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="mainFrame">
+      <property name="styleSheet">
+       <string notr="true">#mainFrame{
+    border: 10px solid qlineargradient(x1:0, y1:0, x2:1, y2:1, 
+                    stop:0 #ff6666,
+                    stop:0.1 #ff7777,
+                    stop:0.49 #cc3333,
+                    stop:0.5 #bb2244,
+                    stop:1 #cc3333);
+    border-radius: 40px;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                    stop:0 #d0d0d0,
+                    stop:0.2 #f0f0f0,
+                    stop:0.5 #ffffff);
+}
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>5</number>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <item row="6" column="2">
+        <widget class="QPushButton" name="filter_applications_button">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>62</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>312</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: white;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #CCCCCC,
+                                       stop:0.1 #DDDDDD,
+                                       stop:0.49 #AAAAAA,
+                                       stop:0.5 #999999,
+                                       stop:1 #AAAAAA);
+    border-width: 1px;
+    border-color: #999999;
+    border-style: solid;
+    border-radius: 7px;
+    padding: 3px;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 50px;
+    max-width: 300px;
+    min-height: 20px;
+    max-height: 20px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #DDDDDD,
+                                       stop:0.1 #EEEEEE,
+                                       stop:0.49 #BBBBBB,
+                                       stop:0.5 #AAAAAA,
+                                       stop:1 #BBBBBB);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #AAAAAA,
+                                       stop:0.1 #BBBBBB,
+                                       stop:0.49 #888888,
+                                       stop:0.5 #777777,
+                                       stop:1 #888888);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Show Unique Applications</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Users/Durak/Downloads/filter.png</normaloff>../../Users/Durak/Downloads/filter.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="search_text">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>188</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>188</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">            border: 3px solid qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                                             stop:0 #ff6666,
+                                             stop:0.1 #ff7777,
+                                             stop:0.49 #cc3333,
+                                             stop:0.5 #bb2244,
+                                             stop:1 #cc3333);
+            border-radius: 10px;
+            background: rgb(243, 243, 243);
+</string>
+         </property>
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Search by Name</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QPushButton" name="repeated_application_button">
+         <property name="minimumSize">
+          <size>
+           <width>62</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>212</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: white;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #CCCCCC,
+                                       stop:0.1 #DDDDDD,
+                                       stop:0.49 #AAAAAA,
+                                       stop:0.5 #999999,
+                                       stop:1 #AAAAAA);
+    border-width: 1px;
+    border-color: #999999;
+    border-style: solid;
+    border-radius: 7px;
+    padding: 3px;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 50px;
+    max-width: 200px;
+    min-height: 20px;
+    max-height: 20px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #DDDDDD,
+                                       stop:0.1 #EEEEEE,
+                                       stop:0.49 #BBBBBB,
+                                       stop:0.5 #AAAAAA,
+                                       stop:1 #BBBBBB);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #AAAAAA,
+                                       stop:0.1 #BBBBBB,
+                                       stop:0.49 #888888,
+                                       stop:0.5 #777777,
+                                       stop:1 #888888);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Repeated Applications</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Users/Durak/Downloads/repeat_FILL0_wght300_GRAD200_opsz48.png</normaloff>../../Users/Durak/Downloads/repeat_FILL0_wght300_GRAD200_opsz48.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="all_applications_button">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>62</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>212</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: white;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #CCCCCC,
+                                       stop:0.1 #DDDDDD,
+                                       stop:0.49 #AAAAAA,
+                                       stop:0.5 #999999,
+                                       stop:1 #AAAAAA);
+    border-width: 1px;
+    border-color: #999999;
+    border-style: solid;
+    border-radius: 7px;
+    padding: 3px;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 50px;
+    max-width: 200px;
+    min-height: 20px;
+    max-height: 20px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #DDDDDD,
+                                       stop:0.1 #EEEEEE,
+                                       stop:0.49 #BBBBBB,
+                                       stop:0.5 #AAAAAA,
+                                       stop:1 #BBBBBB);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #AAAAAA,
+                                       stop:0.1 #BBBBBB,
+                                       stop:0.49 #888888,
+                                       stop:0.5 #777777,
+                                       stop:1 #888888);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>All Applications</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Users/Durak/Downloads/profiles.png</normaloff>../../Users/Durak/Downloads/profiles.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QPushButton" name="assigned_mentors_button">
+         <property name="minimumSize">
+          <size>
+           <width>62</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: white;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #CCCCCC,
+                                       stop:0.1 #DDDDDD,
+                                       stop:0.49 #AAAAAA,
+                                       stop:0.5 #999999,
+                                       stop:1 #AAAAAA);
+    border-width: 1px;
+    border-color: #999999;
+    border-style: solid;
+    border-radius: 7px;
+    padding: 3px;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 50px;
+    max-width: 300px;
+    min-height: 20px;
+    max-height: 20px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #DDDDDD,
+                                       stop:0.1 #EEEEEE,
+                                       stop:0.49 #BBBBBB,
+                                       stop:0.5 #AAAAAA,
+                                       stop:1 #BBBBBB);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #AAAAAA,
+                                       stop:0.1 #BBBBBB,
+                                       stop:0.49 #888888,
+                                       stop:0.5 #777777,
+                                       stop:1 #888888);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Mentor Assigned</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Users/Durak/Downloads/supervised_user_circle_FILL0_wght300_GRAD200_opsz48.png</normaloff>../../Users/Durak/Downloads/supervised_user_circle_FILL0_wght300_GRAD200_opsz48.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLineEdit" name="search_text_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>163</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">            border: 3px solid qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                                             stop:0 #ff6666,
+                                             stop:0.1 #ff7777,
+                                             stop:0.49 #cc3333,
+                                             stop:0.5 #bb2244,
+                                             stop:1 #cc3333);
+            border-radius: 10px;
+            background: rgb(243, 243, 243);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Search in all columns</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QLabel" name="logo1">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>logo1.ico</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0" colspan="7">
+        <widget class="QTableWidget" name="tableWidget">
+         <property name="styleSheet">
+          <string notr="true">QTableView QHeaderView::section:horizontal {
+    color: white;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #ff6666,
+                                       stop:0.1 #ff7777,
+                                       stop:0.49 #cc3333,
+                                       stop:0.5 #bb2244,
+                                       stop:1 #cc3333);
+    border: none;
+    height: 32px;
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::WinPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="lineWidth">
+          <number>10</number>
+         </property>
+         <property name="midLineWidth">
+          <number>10</number>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
+         <property name="gridStyle">
+          <enum>Qt::SolidLine</enum>
+         </property>
+         <property name="sortingEnabled">
+          <bool>true</bool>
+         </property>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Assignment Date</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Name Surname</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>eMail</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Phone Number</string>
+          </property>
+          <property name="background">
+           <color>
+            <red>170</red>
+            <green>85</green>
+            <blue>255</blue>
+           </color>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Post Code</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Province</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Current Status</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="7" alignment="Qt::AlignHCenter|Qt::AlignTop">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Applications Menu&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="2" alignment="Qt::AlignLeft">
+        <widget class="QPushButton" name="export_to_excel_button">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: white;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #ff6666,
+                                       stop:0.1 #ff7777,
+                                       stop:0.49 #cc3333,
+                                       stop:0.5 #bb2244,
+                                       stop:1 #cc3333);
+    border-width: 1px;
+    border-color: #993333;
+    border-style: solid;
+    border-radius: 7px;
+    padding: 3px;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 100px;
+    max-width: 300px;
+    min-height: 20px;
+    max-height: 20px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #ff8888,
+                                       stop:0.1 #ff9999,
+                                       stop:0.49 #cc5555,
+                                       stop:0.5 #bb3355,
+                                       stop:1 #cc5555);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #ff4444,
+                                       stop:0.1 #ff5555,
+                                       stop:0.49 #cc1111,
+                                       stop:0.5 #aa0022,
+                                       stop:1 #cc1111);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Export to excel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2" colspan="3" alignment="Qt::AlignRight|Qt::AlignTop">
+        <widget class="QLabel" name="logo2">
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>logo2.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QPushButton" name="search_button">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>230</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>312</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: white;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #CCCCCC,
+                                       stop:0.1 #DDDDDD,
+                                       stop:0.49 #AAAAAA,
+                                       stop:0.5 #999999,
+                                       stop:1 #AAAAAA);
+    border-width: 1px;
+    border-color: #999999;
+    border-style: solid;
+    border-radius: 7px;
+    padding: 3px;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 50px;
+    max-width: 200px;
+    min-height: 20px;
+    max-height: 20px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #DDDDDD,
+                                       stop:0.1 #EEEEEE,
+                                       stop:0.49 #BBBBBB,
+                                       stop:0.5 #AAAAAA,
+                                       stop:1 #BBBBBB);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #AAAAAA,
+                                       stop:0.1 #BBBBBB,
+                                       stop:0.49 #888888,
+                                       stop:0.5 #777777,
+                                       stop:1 #888888);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Search</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Users/Durak/Downloads/search_FILL0_wght300_GRAD200_opsz48.png</normaloff>../../Users/Durak/Downloads/search_FILL0_wght300_GRAD200_opsz48.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="3">
+        <widget class="QPushButton" name="unassigned_mentors_button">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>62</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>312</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: white;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #CCCCCC,
+                                       stop:0.1 #DDDDDD,
+                                       stop:0.49 #AAAAAA,
+                                       stop:0.5 #999999,
+                                       stop:1 #AAAAAA);
+    border-width: 1px;
+    border-color: #999999;
+    border-style: solid;
+    border-radius: 7px;
+    padding: 3px;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 50px;
+    max-width: 300px;
+    min-height: 20px;
+    max-height: 20px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #DDDDDD,
+                                       stop:0.1 #EEEEEE,
+                                       stop:0.49 #BBBBBB,
+                                       stop:0.5 #AAAAAA,
+                                       stop:1 #BBBBBB);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #AAAAAA,
+                                       stop:0.1 #BBBBBB,
+                                       stop:0.49 #888888,
+                                       stop:0.5 #777777,
+                                       stop:1 #888888);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Mentor Not Assigned</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Users/Durak/Downloads/person_FILL0_wght400_GRAD0_opsz24.png</normaloff>../../Users/Durak/Downloads/person_FILL0_wght400_GRAD0_opsz24.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="3">
+        <widget class="QPushButton" name="previous_vit_button">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>62</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>312</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: white;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #CCCCCC,
+                                       stop:0.1 #DDDDDD,
+                                       stop:0.49 #AAAAAA,
+                                       stop:0.5 #999999,
+                                       stop:1 #AAAAAA);
+    border-width: 1px;
+    border-color: #999999;
+    border-style: solid;
+    border-radius: 7px;
+    padding: 3px;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 50px;
+    max-width: 300px;
+    min-height: 20px;
+    max-height: 20px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #DDDDDD,
+                                       stop:0.1 #EEEEEE,
+                                       stop:0.49 #BBBBBB,
+                                       stop:0.5 #AAAAAA,
+                                       stop:1 #BBBBBB);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #AAAAAA,
+                                       stop:0.1 #BBBBBB,
+                                       stop:0.49 #888888,
+                                       stop:0.5 #777777,
+                                       stop:1 #888888);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Check Previous Applications</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Users/Durak/Downloads/arrow_back_FILL0_wght300_GRAD200_opsz48.png</normaloff>../../Users/Durak/Downloads/arrow_back_FILL0_wght300_GRAD200_opsz48.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="3" alignment="Qt::AlignLeft">
+        <widget class="QPushButton" name="exit_button">
+         <property name="minimumSize">
+          <size>
+           <width>112</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>312</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: white;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #ff6666,
+                                       stop:0.1 #ff7777,
+                                       stop:0.49 #cc3333,
+                                       stop:0.5 #bb2244,
+                                       stop:1 #cc3333);
+    border-width: 1px;
+    border-color: #993333;
+    border-style: solid;
+    border-radius: 7px;
+    padding: 3px;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 100px;
+    max-width: 300px;
+    min-height: 20px;
+    max-height: 20px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #ff8888,
+                                       stop:0.1 #ff9999,
+                                       stop:0.49 #cc5555,
+                                       stop:0.5 #bb3355,
+                                       stop:1 #cc5555);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #ff4444,
+                                       stop:0.1 #ff5555,
+                                       stop:0.49 #cc1111,
+                                       stop:0.5 #aa0022,
+                                       stop:1 #cc1111);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Exit</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Users/Durak/Downloads/close_FILL0_wght400_GRAD0_opsz24.png</normaloff>../../Users/Durak/Downloads/close_FILL0_wght400_GRAD0_opsz24.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="1">
+        <widget class="QPushButton" name="return_button">
+         <property name="minimumSize">
+          <size>
+           <width>62</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>212</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: white;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #CCCCCC,
+                                       stop:0.1 #DDDDDD,
+                                       stop:0.49 #AAAAAA,
+                                       stop:0.5 #999999,
+                                       stop:1 #AAAAAA);
+    border-width: 1px;
+    border-color: #999999;
+    border-style: solid;
+    border-radius: 7px;
+    padding: 3px;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 50px;
+    max-width: 200px;
+    min-height: 20px;
+    max-height: 20px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #DDDDDD,
+                                       stop:0.1 #EEEEEE,
+                                       stop:0.49 #BBBBBB,
+                                       stop:0.5 #AAAAAA,
+                                       stop:1 #BBBBBB);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #AAAAAA,
+                                       stop:0.1 #BBBBBB,
+                                       stop:0.49 #888888,
+                                       stop:0.5 #777777,
+                                       stop:1 #888888);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Return- Choices</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Users/Durak/Downloads/choice.png</normaloff>../../Users/Durak/Downloads/choice.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+      <zorder>logo1</zorder>
+      <zorder>tableWidget</zorder>
+      <zorder>label</zorder>
+      <zorder>search_text</zorder>
+      <zorder>all_applications_button</zorder>
+      <zorder>repeated_application_button</zorder>
+      <zorder>search_text_2</zorder>
+      <zorder>assigned_mentors_button</zorder>
+      <zorder>filter_applications_button</zorder>
+      <zorder>logo2</zorder>
+      <zorder>export_to_excel_button</zorder>
+      <zorder>search_button</zorder>
+      <zorder>unassigned_mentors_button</zorder>
+      <zorder>previous_vit_button</zorder>
+      <zorder>exit_button</zorder>
+      <zorder>return_button</zorder>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>search_text</tabstop>
+  <tabstop>search_text_2</tabstop>
+  <tabstop>all_applications_button</tabstop>
+  <tabstop>assigned_mentors_button</tabstop>
+  <tabstop>repeated_application_button</tabstop>
+  <tabstop>filter_applications_button</tabstop>
+  <tabstop>tableWidget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
