@@ -13,7 +13,7 @@ interviews with a user-friendly interface.
 
 \`\`\`bash
 
-git clone https://github.com/username/CRM.v2.git
+git clone https://github.com/werhereitacademy/VIT4-Python-Module-Week7.git
 
 1\. Install the required dependencies:
 
