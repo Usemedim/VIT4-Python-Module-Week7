@@ -1,13 +1,20 @@
-1.	Clone this project:
-git clone https://github.com/username/CRM.v2.git
-cd CRM.v2
-2.	Install the required dependencies:
+# CRM.v2 Project
+
+## Introduction
+This project is a CRM application that allows users and administrators to manage applications and interviews. The application provides various modules covering login, application management, mentor meetings, and interviews with a user-friendly interface.
+
+## Installation Instructions
+1. Clone this project:
+   ```bash
+   git clone https://github.com/username/CRM.v2.git
+1.	Install the required dependencies:
 pip install -r requirements.txt
-3.	Run the application:
+2.	Run the application:
 Python main.py
+
 Usage Instructions
 Login Window
-![1_login.png](img/1_login.png)![1_login.png](img/1_login.png)
+ ![1_login.png](img/1_login.png)![1_login.png](img/1_login.png)
 Username and Password
 •	Access is granted to users whose username and password are saved by the main Gmail account user of Google Drive.
 •	If the user's access permission is Admin, they are directed to the Choices - Admin menu; if the access permission is User, they are directed to the Choices menu.
@@ -24,12 +31,12 @@ A) Choices Admin
 •	Interviews: The Interviews button directs the admin to the interviews window.
 •	Admin Menu: The Admin button directs the admin to the Admin window.
 B) Choices
-![2_choices.png](img/2_choices.png)![2_choices.png](img/2_choices.png)
+![2_choices.png](img/2_choices.png)![2_choices.png](img/2_choices.png) 
 •	Applications: The Applications button directs the user to the initial applications window.
 •	Mentor Interviews: The Mentor Interviews button directs the user to the mentor window.
 •	Interviews: The Interviews button directs the user to the interviews window.
 Applications
-![4_applications.png](img/4_applications.png)![4_applications.png](img/4_applications.png)
+![4_applications.png](img/4_applications.png)![4_applications.png](img/4_applications.png) 
 •	Search: Can search for names within the text entered in the text line (e.g., entering 'Me' will bring all names starting with 'Me' recorded in the drive).
 •	All Applications: When the All Applications button is clicked, all applications recorded in the applications file on the drive are displayed on the screen.
 •	Assigned Mentor Interviews: When the Assigned Mentor Interviews button is clicked, individuals who have been assigned a mentor meeting after applying are displayed on the screen.
@@ -39,7 +46,7 @@ Applications
 •	Show Unique Applications: When the Show Unique Applications button is clicked, records in the applications file are filtered and displayed without duplicate records (if a name is registered more than once, this record is displayed only once).
 •	Return to Choices Screen: When the Return to Choices Screen button is clicked, the user returns to the Choices screen.
 Mentor Menu
-![6_mentor_menu.png](img/6_mentor_menu.png)![6_mentor_menu.png](img/6_mentor_menu.png)
+![6_mentor_menu.png](img/6_mentor_menu.png)![6_mentor_menu.png](img/6_mentor_menu.png) 
 •	Search: Can search for names within the text entered in the text line.
 •	All Interviews: When the All Interviews button is clicked, all interviews recorded in the Mentor file are displayed on the screen.
 •	Return to Choices Screen: When the Return to Choices Screen button is clicked, the user returns to the Choices screen.
