@@ -1,4 +1,4 @@
-# CRM.v2 Project
+# CRM_v4.3 Project
 
 ## Introduction
 
@@ -191,3 +191,20 @@ Authors and Acknowledgments
 Version History
 
 • v1.0.0: Initial release.
+
+# Minimum System Requirements
+
+## Operating System:
+- Windows 7 or later
+- macOS 10.12 (Sierra) or later
+- Linux (any modern distribution)
+
+## Processor:
+- A multi-core processor (Intel i3 or equivalent)
+
+## Memory (RAM):
+- At least 4 GB of RAM (8 GB recommended for better performance, especially if dealing with large datasets in pandas)
+
+## Storage:
+- At least 500 MB of free disk space for Python, libraries, and application data
+- Additional space as needed for storing datasets and temporary files
